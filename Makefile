@@ -48,5 +48,13 @@ sorting.o: sorting.c
 util.o: util.c util.h
 	cc -c util.c
 
+list: list.o list_trial.o
+	cc -o list_trial list.o list_trial.o
+
+list_trial.o: list_trial.c
+	cc -c list_trial.c
+list.o: list.c list.h
+	cc -c list.c
+
 clean:
 	rm *.o *_trial
