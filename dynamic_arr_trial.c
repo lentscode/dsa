@@ -38,7 +38,7 @@ int main(void) {
 
 	printf("[");
 	for (size_t i = 0; i < arr->length; i++) {
-		printf("%d", (int)arr->arr[i]);	
+		printf("%d", *((int*)arr->arr + i * sizeof(int)));	
 		if (i < arr->length - 1) printf(", ");
 	}
 	printf("]\n");
