@@ -12,7 +12,10 @@ typedef struct node {
 
 node_t* tree_create(size_t e_size, void* value);
 node_t* node_add_child(node_t* node, void* value);
-node_t* tree_find(node_t* root, void* value);
+node_t* tree_find(node_t* root, void* value, int (*cmp)(const void*, const void*));
+void tree_bfs(node_t* root, void (*operate)(const void*));
+void tree_dfs(node_t* root, void (*operate)(const void*));
+void tree_recursive(node_t* root, void (*operate)(const void*));
 void tree_free(node_t* root, void (*free_value)(void*));
 
 #endif //TREE_H
