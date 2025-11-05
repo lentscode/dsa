@@ -17,7 +17,7 @@ int main(void) {
 
 	printf("[");
 	for (size_t i = 0; i < stack->length; i++) {
-		printf("%d", *((int*)arr->arr + i * sizeof(int)));	
+		printf("%d", *((int*)stack->arr + i * sizeof(int)));	
 		if (i < stack->length - 1) printf(", ");
 	}
 	printf("]\n");
